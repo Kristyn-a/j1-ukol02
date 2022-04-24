@@ -14,6 +14,8 @@ public class HlavniProgram {
 
         nakresliSnehulaka(zofka);
 
+        zofka.setLocation(1100, 187.9);
+
 //        zofka.setLocation(109, 59);
 //
 //        nakresliKolecko(zofka, 10);

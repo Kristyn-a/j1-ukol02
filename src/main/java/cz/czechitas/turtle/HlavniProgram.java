@@ -12,6 +12,8 @@ public class HlavniProgram {
         zofka.setLocation(100, 100);
         nakresliZmrzlinu(zofka);
 
+        nakresliSnehulaka(zofka);
+
 //        zofka.setLocation(109, 59);
 //
 //        nakresliKolecko(zofka, 10);
@@ -29,6 +31,22 @@ public class HlavniProgram {
 
 
 
+    }
+
+    private void nakresliSnehulaka(Turtle zofka) {
+        zofka.setLocation(350, 100);
+        zofka.turnRight(20);
+        nakresliKolecko(zofka,14);
+        zofka.setLocation(390.3, 140.3);
+        zofka.turnRight(100);
+        nakresliKolecko(zofka,20);
+        zofka.setLocation(390.3, 255.5);
+        nakresliKolecko(zofka,28);
+        zofka.setLocation(333.6, 187.9);
+        zofka.turnRight(80);
+        nakresliKolecko(zofka, 7);
+        zofka.setLocation(488.8, 187.9);
+        nakresliKolecko(zofka, 7);
     }
 
     private void nakresliZmrzlinu(Turtle zofka) {

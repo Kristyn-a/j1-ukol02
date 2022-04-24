@@ -14,25 +14,33 @@ public class HlavniProgram {
 
         nakresliSnehulaka(zofka);
 
-        zofka.setLocation(1100, 187.9);
+        nakresliMasinku(zofka);
 
-//        zofka.setLocation(109, 59);
-//
-//        nakresliKolecko(zofka, 10);
+    }
 
+    private void nakresliMasinku(Turtle zofka) {
+        zofka.setLocation(1000, 200);
+        nakresliObdelnik(zofka, 200,130);
+        zofka.setLocation(870, 270);
+        nakresliObdelnik(zofka, 130,200);
+        zofka.setLocation(670, 300);
+        nakresliPravouhlyTrojuhelnik(zofka, 130,183.8);
+        zofka.setLocation(715, 400);
+        zofka.turnLeft(90);
+        koleckoMasinky(zofka, 8.6);
+        zofka.setLocation(805, 400);
+        koleckoMasinky(zofka, 8.6);
+        zofka.setLocation(870, 408.5);
+        zofka.turnLeft(90);
+        koleckoMasinky(zofka, 17.1);
+    }
 
+    private void koleckoMasinky(Turtle zofka, double velikostStrany) {
+        for (int i = 0; i < 24; i++) {
+            zofka.move(velikostStrany);
+            zofka.turnRight(15);
 
-//        nakresliCtverec(zofka,50);
-//
-//        nakresliObdelnik(zofka,50,90);
-//
-//        nakresliRovnostrannyTrojuhelnik(zofka,100);
-//
-//        nakresliKolecko(zofka, 7);
-
-
-
-
+        }
     }
 
     private void nakresliSnehulaka(Turtle zofka) {
@@ -84,27 +92,24 @@ public class HlavniProgram {
         zofka.turnRight(90);
 
     }
-        private void nakresliObdelnik(Turtle zofka, double delkaKratsiStrany, double delkaDelsiStrany) {
-            zofka.move(delkaKratsiStrany);
+        private void nakresliObdelnik(Turtle zofka, double delkaStranyY, double delkaStranyX) {
+            zofka.move(delkaStranyY);
             zofka.turnRight(90);
-            zofka.move(delkaDelsiStrany);
+            zofka.move(delkaStranyX);
             zofka.turnRight(90);
-            zofka.move(delkaKratsiStrany);
+            zofka.move(delkaStranyY);
             zofka.turnRight(90);
-            zofka.move(delkaDelsiStrany);
+            zofka.move(delkaStranyX);
             zofka.turnRight(90);
 
         }
-            private void nakresliRovnostrannyTrojuhelnik(Turtle zofka, double delkaStrany) {
-            zofka.move(delkaStrany);
-            zofka.turnRight(120);
-            zofka.move(delkaStrany);
-            zofka.turnRight(120);
-            zofka.move(delkaStrany);
-            zofka.turnRight(120);
-
-
-
+            private void nakresliPravouhlyTrojuhelnik(Turtle zofka, double delkaOdvesny, double delkaPrepony) {
+            zofka.move(delkaOdvesny);
+            zofka.turnRight(90);
+            zofka.move(delkaOdvesny);
+            zofka.turnRight(135);
+            zofka.move(delkaPrepony);
+            zofka.turnRight(135);
 
     }
 
